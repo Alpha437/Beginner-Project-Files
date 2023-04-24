@@ -1,0 +1,208 @@
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+/* || VARIABLES */
+:root {
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+}
+
+/* || NAV */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px black solid;
+  grid-column: 1 / -1;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-weight: var(--fw-600);
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  display: none;
+}
+.nav-links a:last-child {
+  font-size: 2rem;
+  display: inline;
+}
+
+/* || LEFT-COLUMN */
+.left-column {
+  grid-column: span 3;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.left-column h2 {
+  font-size: 2rem;
+  font-weight: var(--fw-800);
+}
+
+.blog-heading .description {
+  margin-top: .5rem;
+  font-weight: var(--fw-500);
+}
+
+.post-details {
+  margin-top: 1rem;
+}
+
+.post-details img {
+  width: 50%;
+  height: auto;
+}
+
+.post-date span {
+  font-weight: var(--fw-600);
+}
+
+article h3 {
+  font-weight: var(--fw-700);
+}
+
+article p {
+  margin-top: 1rem;
+}
+
+article .first {
+  margin-top: .5rem;
+}
+
+.html-uses ul {
+  padding-left: 1.5rem;
+}
+
+.first-article-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(241, 241, 241);
+  border: 2px solid rgb(160, 160, 160);
+  padding: .5rem;
+}
+
+.html-page-structure figure,
+.html-element figure {
+  padding-left: 2rem;
+}
+
+.html-page-structure img,
+.html-element img {
+  width: 100%;
+}
+
+.html-page-structure figcaption,
+.html-element figcaption {
+  font-style: italic;
+  font-weight: var(--fw-500);
+}
+
+.html-page-structure iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* || RIGHT-COLUMN */
+.right-column {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.related-posts {
+  background-color: rgb(241, 241, 241);
+  padding: 1rem .5rem;
+}
+
+.related-posts h3 {
+  font-weight: var(--fw-700);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.related-posts ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.related-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(218, 218, 218);
+  padding: .5rem 1rem;
+}
+
+.related-title {
+  font-weight: var(--fw-700);
+}
+
+.related-author {
+  margin-top: .5rem;
+  font-weight: var(--fw-500);
+}
+
+/* || FOOTER */
+.references {
+  padding-inline: 1rem;
+}
+
+.references ul {
+  list-style: none;
+}
+
+.references li a {
+  color: black;
+}
+
+/* || FOOTER */
+footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  background-color:rgb(207, 207, 207);
+  padding: .5rem 0;
+}

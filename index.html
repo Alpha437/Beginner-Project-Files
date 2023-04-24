@@ -7,236 +7,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: "Open Sans", sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="style.css">
+
   <title>Code-X</title>
 </head>
 
 <body>
   <header>
-    <div class="container">
-      <h1>CODE-X MAGAZINE</h1>
-      <nav>
+    <div class="nav-container">
+      <h1 class="logo">CODE-X MAGAZINE</h1>
+      <nav class="nav-links">
         <a href="#">Home</a>
         <a href="#">Blog</a>
         <a href="#">Contact Us</a>
-        <a href="#">Float</a>
+        <a href="#"><i class="bi bi-list"></i></a>
+        <!-- <a href="#">Float</a>
         <a href="#">Flexbox</a>
-        <a href="#">CSS-Grid</a>
+        <a href="#">CSS-Grid</a> -->
       </nav>
     </div>
   </header>
-  <hr>
-  <section>
-    <h2>Introduction To HTML For Absolute Beginners</h2>
-    <p>Learn what HTML is, what it's used for and how to write it.</p>
 
-    <img src="../images/austin-distel-97HfVpyNR1M-unsplash.jpg" alt="author" width="200">
+  <main class="left-column">
+    <section class="blog-heading">
+      <h2>Introduction To HTML For Absolute Beginners</h2>
+      <p class="description">Learn what HTML is, what it's used for and how to write it.</p>
+      <div class="post-details">
+        <img src="../images/austin-distel-97HfVpyNR1M-unsplash.jpg" alt="author" width="200">
+        <p class="post-date">Posted by <span class="author-name">Austin Distel</span> on 4th of March, 2023.</p>
+      </div>
+    </section>
+    <article>
+      <div class="first-article-heading">
+        <img src="../images/html5-logo.png" alt="html-logo" width="50">
+        <h3>What is HTML?</h3>
+      </div>
+      <p class="first">
+        The HyperText Markup Language or HTML is the standard markup language
+        for documents designed to be displayed in a web browser.
+      </p>
+      <p>
+        HTML elements are the building blocks of HTML pages. HTML provides a
+        means to create structured documents by denoting structural semantics
+        for text such as headings, paragraphs, lists, links, quotes, and other
+        items. If you're interested in building a website, web development, or
+        just coding in general, learning HTML is a great place to start.
+      </p>
+    </article>
+    <article>
+      <h3>Is HTML a programming language?</h3>
+      <p class="first">
+        Whether HTML is or is not technically a “programming” language is an
+        ongoing debate among web developers and experts. While the majority
+        defines HTML as a “markup” language (not a programming language) some
+        argue the two aren't mutually exclusive.
+      </p>
+      <p>
+        All programming languages have some functional purpose — they need to
+        “do” something, whether it be evaluating expressions, declaring
+        variables, or modifying data. JavaScript is the most widely-used
+        programming language in web development. Other popular programming
+        languages include Python, Java, and C.
+      </p>
+    </article>
+    <article class="html-uses">
+      <h3>What is HTML used for?</h3>
+      <p class="first">
+        HTML is primarily used for creating web pages. HTML is free to use and
+        ensures your text, images, and other elements are displayed as intended.
+      </p>
+      <p>
+        With HTML, not only can you add headings, paragraphs, lists, and other
+        elements to your page — you can also embed images, videos, audio files,
+        and other multimedia. And, you can link to other web pages on the same
+        website or from another site. This allows visitors to easily navigate
+        your website and jump between websites.
+      </p>
+      <p>
+        HTML is used to create things other than web pages, too. You can use it
+        to:
+      </p>
+      <ul>
+        <li>make tables for organizing data</li>
+        <li>
+          create forms for collecting user information, processing transactions,
+          making reservations, or placing an order
+        </li>
+        <li>create emails with HTML</li>
+      </ul>
+    </article>
+    <article class="html-element">
+      <h3>How to Write HTML</h3>
+      <p class="first">
+        The main building block of an HTML web page is an element. An HTML
+        element is a unit of information that tells the web browser what to
+        render for the viewer. An HTML element could be a piece of text like a
+        paragraph, an interactive item like a button, or a section of the page
+        like a header or footer.
+      </p>
+      <figure>
+        <img src="../images/HTML Element diagram.png" alt="html-element" width="350">
+        <figcaption>
+          Here's what a basic element looks like written out in HTML. This
+          element is called the &lt;button> element, and creates a button on the
+          screen that users can click with the mouse.
+        </figcaption>
+      </figure>
+    </article>
+    <article>
+      <h3>HTML Tags</h3>
+      <p class="first">
+        HTML elements are designated by tags. Most elements have an opening tag
+        and a closing tag. Opening tags precede contain the element name
+        enclosed by angle brackets (&lt;>). Closing tags are identical to
+        opening tags, save for a slash (/) that precedes the element name.
+      </p>
+      <p>
+        Tags contain an element's content. Content may be text, a media item, or
+        even other elements.
+      </p>
+      <p>
+        So, say you want to add a paragraph to your web page, the the paragraph
+        contains the text “This is a paragraph.” You'll wrap it with the HTML
+        paragraph tags &lt;p> and &lt;/p>.
+      </p>
+    </article>
+    <article>
+      <h3>HTML Attributes</h3>
+      <p class="first">
+        While all HTML elements need tags, only some require attributes. An HTML
+        attribute is text inside of the opening tag that provides additional
+        information about the HTML element.
+      </p>
+      <p>
+        An attribute is always found in the opening tag of an HTML element. Most
+        have the syntax name=“value”, though some attributes only require you to
+        write the name without any assigned value.
+      </p>
+      <p>
+        Some elements require certain attributes. For example, an HTML image
+        element (&lt;img>) must always contain a source attribute (src) whose
+        value is the image URL or file path. Otherwise, the browser will not
+        know what image to render.
+      </p>
+      <p>
+        Similarly, the anchor element (&lt;a>), which creates a hyperlink, must
+        contain an href attribute with a value that specifies the link's
+        destination. Otherwise, if a visitor clicks on the anchor element, the
+        browser won't send them anywhere.
+      </p>
+    </article>
+    <article class="html-page-structure">
+      <h3>HTML Page Structure</h3>
+      <p class="first">Below is a visualization of an HTML page structure:</p>
+      <figure>
+        <img src="../images/html-page-structure.png" alt="html-page-structure" width="600">
+        <figcaption>
+          Note: The content inside the &lt;body> section will be displayed in a
+          browser. The content inside the &lt;title> element will be shown in
+          the browser's title bar or in the page's tab.
+        </figcaption>
+      </figure>
+      <p>
+        If you'd prefer to watch how a more complex HTML file is built out with
+        images, links, forms, and other elements, check out this video:
+      </p>
+      <iframe width="624" height="500" src="https://www.youtube.com/embed/916GWv2Qs08"
+        title="HTML Tutorial - Website Crash Course for Beginners (2021)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </article>
+  </main>
 
-    <p>Posted by <b>Austin Distel</b> on 4th of March, 2023.</p>
+  <section class="right-column">
+    <section class="related-posts">
+      <h3>Related Posts</h3>
+      <ul>
+        <li class="related-post">
+          <div class="text">
+            <p class="related-title">How to Easily Build Desktop Apps with HTML, CSS and Javascript</p>
+            <p class="related-author">By Aditya Sridhar</p>
+          </div>
+          <img src="./images/related-post.jpg" alt="related1">
+        </li>
+        <li class="related-post">
+          <div class="text">
+            <p class="related-title">7 Projects to practice HTML & CSS skills for beginners</p>
+            <p class="related-author">By Avic Ndugu</p>
+          </div>
+          <img src="./images/related-post1.jpg" alt="">
+        </li>
+        <li class="related-post">
+          <div class="text">
+            <p class="related-title">25 HTML & CSS Tutorials</p>
+            <p class="related-author">By Brandon Morelli</p>
+          </div>
+          <img src="./images/related-post2.png" alt="">
+        </li>
+        <li class="related-post">
+          <div class="text">
+            <p class="related-title">Essential HTML, CSS and JavaScript Tools and Libraries</p>
+            <p class="related-author">By Bradley Nice</p>
+          </div>
+          <img src="./images/related-post3.jpg" alt="">
+        </li>
+      </ul>
+    </section>
+    <div class="references">
+      <h3>References</h3>
+      <ul>
+        <li>
+          <a href="https://www.w3schools.com/html/html_intro.asp">W3-Schools</a>
+        </li>
+        <li><a href="https://blog.hubspot.com/website/html">Hubspot</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/HTML">Wikipedia</a></li>
+        <li><a href="https://medium.com/search?q=html+css">Medium</a></li>
+      </ul>
+    </div>
   </section>
 
-  <article>
-    <h3>What is HTML?</h3>
-    <img src="../images/html5-logo.png" alt="html-logo">
-
-    <p>
-      The HyperText Markup Language or HTML is the standard markup language
-      for documents designed to be displayed in a web browser.
-    </p>
-    <p>
-      HTML elements are the building blocks of HTML pages. HTML provides a
-      means to create structured documents by denoting structural semantics
-      for text such as headings, paragraphs, lists, links, quotes, and other
-      items. If you're interested in building a website, web development, or
-      just coding in general, learning HTML is a great place to start.
-    </p>
-  </article>
-
-  <article>
-    <h3>Is HTML a programming language?</h3>
-
-    <p>
-      Whether HTML is or is not technically a “programming” language is an
-      ongoing debate among web developers and experts. While the majority
-      defines HTML as a “markup” language (not a programming language) some
-      argue the two aren't mutually exclusive.
-    </p>
-    <p>
-      All programming languages have some functional purpose — they need to
-      “do” something, whether it be evaluating expressions, declaring
-      variables, or modifying data. JavaScript is the most widely-used
-      programming language in web development. Other popular programming
-      languages include Python, Java, and C.
-    </p>
-  </article>
-
-  <article>
-    <h3>What is HTML used for?</h3>
-
-    <p>
-      HTML is primarily used for creating web pages. HTML is free to use and
-      ensures your text, images, and other elements are displayed as intended.
-    </p>
-
-    <p>
-      With HTML, not only can you add headings, paragraphs, lists, and other
-      elements to your page — you can also embed images, videos, audio files,
-      and other multimedia. And, you can link to other web pages on the same
-      website or from another site. This allows visitors to easily navigate
-      your website and jump between websites.
-    </p>
-    <p>
-      HTML is used to create things other than web pages, too. You can use it
-      to:
-    </p>
-
-    <ul>
-      <li>make tables for organizing data</li>
-      <li>
-        create forms for collecting user information, processing transactions,
-        making reservations, or placing an order
-      </li>
-      <li>create emails with HTML</li>
-    </ul>
-  </article>
-
-  <article>
-    <h3>How to Write HTML</h3>
-
-    <p>
-      The main building block of an HTML web page is an element. An HTML
-      element is a unit of information that tells the web browser what to
-      render for the viewer. An HTML element could be a piece of text like a
-      paragraph, an interactive item like a button, or a section of the page
-      like a header or footer.
-    </p>
-
-    <figure>
-      <img src="../images/HTML Element diagram.png" alt="html-element" width="350">
-      <figcaption>
-        Here's what a basic element looks like written out in HTML. This
-        element is called the &lt;button> element, and creates a button on the
-        screen that users can click with the mouse.
-      </figcaption>
-    </figure>
-  </article>
-
-  <article>
-    <h3>HTML Tags</h3>
-    <p>
-      HTML elements are designated by tags. Most elements have an opening tag
-      and a closing tag. Opening tags precede contain the element name
-      enclosed by angle brackets (&lt;>). Closing tags are identical to
-      opening tags, save for a slash (/) that precedes the element name.
-    </p>
-
-    <p>
-      Tags contain an element's content. Content may be text, a media item, or
-      even other elements.
-    </p>
-
-    <p>
-      So, say you want to add a paragraph to your web page, the the paragraph
-      contains the text “This is a paragraph.” You'll wrap it with the HTML
-      paragraph tags &lt;p> and &lt;/p>.
-    </p>
-  </article>
-
-  <article>
-    <h3>HTML Attributes</h3>
-    <p>
-      While all HTML elements need tags, only some require attributes. An HTML
-      attribute is text inside of the opening tag that provides additional
-      information about the HTML element.
-    </p>
-
-    <p>
-      An attribute is always found in the opening tag of an HTML element. Most
-      have the syntax name=“value”, though some attributes only require you to
-      write the name without any assigned value.
-    </p>
-
-    <p>
-      Some elements require certain attributes. For example, an HTML image
-      element (&lt;img>) must always contain a source attribute (src) whose
-      value is the image URL or file path. Otherwise, the browser will not
-      know what image to render.
-    </p>
-
-    <p>
-      Similarly, the anchor element (&lt;a>), which creates a hyperlink, must
-      contain an href attribute with a value that specifies the link's
-      destination. Otherwise, if a visitor clicks on the anchor element, the
-      browser won't send them anywhere.
-    </p>
-  </article>
-
-  <article>
-    <h3>HTML Page Structure</h3>
-    <p>Below is a visualization of an HTML page structure:</p>
-    <figure>
-      <img src="../images/html-page-structure.png" alt="html-page-structure" width="600">
-      <figcaption>
-        Note: The content inside the &lt;body> section will be displayed in a
-        browser. The content inside the &lt;title> element will be shown in
-        the browser's title bar or in the page's tab.
-      </figcaption>
-    </figure>
-
-    <p>
-      If you'd prefer to watch how a more complex HTML file is built out with
-      images, links, forms, and other elements, check out this video:
-    </p>
-    <iframe width="624" height="351" src="https://www.youtube.com/embed/916GWv2Qs08"
-      title="HTML Tutorial - Website Crash Course for Beginners (2021)" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </article>
-
-  <section class="related-posts">
-    <h3>Related Posts</h3>
-    <ul>
-      <li class="related-post">
-        <img src="./images/related-post.jpg" alt="related1">
-        <h3 class="related-title">How to Easily Build Desktop Apps with HTML, CSS and Javascript</h3>
-        <p class="related-author"><b>By Aditya Sridhar</b></p>
-      </li>
-      <li class="related-post">
-        <img src="./images/related-post1.jpg" alt="">
-        <h3 class="related-title">7 Projects to practice HTML & CSS skills for beginners</h3>
-        <p class="related-author"><b>By Avic Ndugu</b></p>
-      </li>
-      <li class="related-post">
-        <img src="./images/related-post2.png" alt="">
-        <h3 class="related-title">25 HTML & CSS Tutorials</h3>
-        <p class="related-author"><b>By Brandon Morelli</b></p>
-      </li>
-      <li class="related-post">
-        <img src="./images/related-post3.jpg" alt="">
-        <h3 class="related-title">Essential HTML, CSS and JavaScript Tools and Libraries</h3>
-        <p class="related-author"><b>By Bradley Nice</b></p>
-      </li>
-    </ul>
-  </section>
-
-  <div class="references">
-    <h3>References</h3>
-    <ul>
-      <li>
-        <a href="https://www.w3schools.com/html/html_intro.asp">W3-Schools</a>
-      </li>
-      <li><a href="https://blog.hubspot.com/website/html">Hubspot</a></li>
-      <li><a href="https://en.wikipedia.org/wiki/HTML">Wikipedia</a></li>
-      <li><a href="https://medium.com/search?q=html+css">Medium</a></li>
-    </ul>
-  </div>
-  <hr>
   <footer>
     <p class="copyright">
       Copyright&copy; 2023. Code written by
