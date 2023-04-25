@@ -53,6 +53,10 @@ h1 {
   font-size: 1.5rem;
 }
 
+.highlight {
+  color: #2212aa;
+}
+
 .nav-links {
   display: none;
 }
@@ -65,7 +69,7 @@ h1 {
 
 .nav-links a:hover {
   text-decoration: underline;
-  color: rgba(0, 0, 0, 0.616);
+  color: #2212aa;
 }
 
 /* || LEFT-COLUMN */
@@ -79,7 +83,7 @@ h1 {
 
 .left-column h2 {
   font-size: 2rem;
-  font-weight: var(--fw-800);
+  font-weight: var(--fw-700);
 }
 
 .blog-heading .description {
@@ -122,13 +126,13 @@ article .first {
   align-items: center;
   gap: 1rem;
   background-color: rgb(241, 241, 241);
-  border: 2px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160, 160, 160);
   padding: .5rem;
 }
 
 .first-article-heading h3 {
   font-size: 1.5rem;
-  color: rgb(167, 68, 22);
+  color: #63280a;
 }
 
 .html-page-structure figure,
@@ -167,10 +171,23 @@ article .first {
   padding: 1rem .5rem;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: .5rem;
+}
+
+.line {
+  background-color: #2212aa;
+  flex-grow: 1;
+  height: 2px;
+  border-radius: 1rem;
+}
+
 .related-posts h3 {
-  font-weight: var(--fw-700);
-  font-size: 1.5rem;
-  padding: 1rem 0;
+  font-weight: var(--fw-600);
+  color: #2212aa;
 }
 
 .related-posts ul {
@@ -189,16 +206,19 @@ article .first {
 }
 
 .related-title {
-  font-weight: var(--fw-700);
+  text-decoration: none;
+  color: black;
+  font-weight: var(--fw-600);
 }
 .related-title:hover {
-  color: rgba(0, 0, 0, 0.651);
+  text-decoration: underline;
+  color: #2212aa;
   cursor: pointer;
 }
 
 .related-author {
   margin-top: .5rem;
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-400);
 }
 
 /* || REFERENCES */
