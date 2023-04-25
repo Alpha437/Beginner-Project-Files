@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 img {
@@ -19,25 +20,29 @@ img {
   --fw-800: 800;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
+/* || NAV */
+
+.website {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 1rem;
+  max-width: 1024px;
+  margin-inline: auto;
 }
 
-/* || NAV */
 header {
   display: flex;
   justify-content: center;
   padding: 1rem;
   background-color: white;
-  border-bottom: 1px black solid;
-  grid-column: 1 / -1;
+  box-shadow: 0 0 15px 0.5px rgba(48, 48, 48, 0.274);
+  position: sticky;
+  top: 0;
 }
 
 .nav-container {
   width: 100%;
+  max-width: 1024px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +56,7 @@ h1 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 .nav-links a {
@@ -59,6 +64,10 @@ h1 {
   color: black;
   font-weight: 500;
   display: none;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.616);
 }
 .nav-links a:last-child {
   font-size: 2rem;
@@ -90,6 +99,7 @@ h1 {
 
 .post-details img {
   width: 50%;
+  width: 200px;
   height: auto;
 }
 
@@ -125,6 +135,7 @@ article .first {
 .html-page-structure figure,
 .html-element figure {
   padding-left: 2rem;
+  max-width: 500px;
 }
 
 .html-page-structure img,
@@ -140,7 +151,8 @@ article .first {
 
 .html-page-structure iframe {
   width: 100%;
-  height: auto;
+  max-width: 500px;
+  height: 280px;
 }
 
 /* || RIGHT-COLUMN */
@@ -180,6 +192,10 @@ article .first {
 .related-title {
   font-weight: var(--fw-700);
 }
+.related-title:hover {
+  color: rgba(0, 0, 0, 0.651);
+  cursor: pointer;
+}
 
 .related-author {
   margin-top: .5rem;
@@ -198,11 +214,38 @@ article .first {
 .references li a {
   color: black;
 }
+.references li a:hover {
+  color: rgba(0, 0, 0, 0.603);
+  text-decoration: none;
+}
 
 /* || FOOTER */
 footer {
-  grid-column: 1 / -1;
   text-align: center;
   background-color:rgb(207, 207, 207);
   padding: .5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-links a {
+    display: inline;
+  }
+  .nav-links a:last-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .website {
+    padding-top: 1rem;
+  }
+  .left-column {
+    grid-column: span 2;
+  }
+  .left-column h2 {
+    margin-top: 0;
+  }
+  .right-column {
+    grid-column: 3 /4;;
+  }
 }
