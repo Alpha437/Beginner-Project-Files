@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
@@ -20,19 +21,16 @@
   <header>
     <div class="nav-container">
       <h1 class="logo">CODE-X MAGAZINE</h1>
-      <nav class="nav-links">
+      <nav class="nav-links" id="nav-links">
         <a href="#">Home</a>
         <a href="#">Blog</a>
         <a href="#">Contact Us</a>
-        <a href="#"><i class="bi bi-list"></i></a>
-        <!-- <a href="#">Float</a>
-          <a href="#">Flexbox</a>
-          <a href="#">CSS-Grid</a> -->
-        </nav>
-      </div>
-    </header>
+      </nav>
+      <button class="nav-toggle"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
 
-    <div class="website">
+  <div class="website">
     <main class="left-column">
       <section class="blog-heading">
         <h2>Introduction To HTML For Absolute Beginners</h2>
@@ -45,7 +43,7 @@
       <article>
         <div class="first-article-heading">
           <img src="../images/html5-logo.png" alt="html-logo" width="50">
-          <h3>What is HTML?</h3>
+          <h3 class="what">What is HTML?</h3>
         </div>
         <p class="first">
           The HyperText Markup Language or HTML is the standard markup language
@@ -237,6 +235,9 @@
       <a href="http://www.github.com/Alpha437">Alpha</a>
     </p>
   </footer>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>

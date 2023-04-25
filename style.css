@@ -54,24 +54,18 @@ h1 {
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  display: none;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   font-weight: 500;
-  display: none;
 }
+
 .nav-links a:hover {
   text-decoration: underline;
   color: rgba(0, 0, 0, 0.616);
-}
-.nav-links a:last-child {
-  font-size: 2rem;
-  display: inline;
 }
 
 /* || LEFT-COLUMN */
@@ -130,6 +124,11 @@ article .first {
   background-color: rgb(241, 241, 241);
   border: 2px solid rgb(160, 160, 160);
   padding: .5rem;
+}
+
+.first-article-heading h3 {
+  font-size: 1.5rem;
+  color: rgb(167, 68, 22);
 }
 
 .html-page-structure figure,
@@ -202,19 +201,20 @@ article .first {
   font-weight: var(--fw-500);
 }
 
-/* || FOOTER */
+/* || REFERENCES */
 .references {
   padding-inline: 1rem;
 }
 
 .references ul {
-  list-style: none;
+  padding-left: 1.5rem;
 }
-
+        
 .references li a {
   color: black;
+  font-weight: 500;
 }
-.references li a:hover {
+.references li a:hover, a:focus {
   color: rgba(0, 0, 0, 0.603);
   text-decoration: none;
 }
@@ -226,15 +226,47 @@ footer {
   padding: .5rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .nav-links a {
-    display: inline;
+/* || MOBILE */
+@media screen and (max-width: 767px) {
+  .nav-container .nav-toggle {
+    font-size: 2rem;
+    display: block;
+    background-color: transparent;
+    border: none;
   }
-  .nav-links a:last-child {
+  .nav-links[data-visible] {
+    display: grid;
+    position: absolute;
+    inset: 4.3rem 0 auto;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 5px 10px 1px rgba(48, 48, 48, 0.144);
+  }
+  .nav-links a {
+    display: block;
+    border-top: 1px solid rgba(48, 48, 48, 0.144);
+    padding: 1rem;
+  }
+  .nav-links a:first-child {
+    border-top: none;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+/* || TABLET */
+@media screen and (min-width: 768px) {
+  .nav-links {
+   display: flex;
+   gap: 2rem;
+  }
+  .nav-container .nav-toggle {
     display: none;
   }
 }
 
+/* || LAPTOP */
 @media screen and (min-width: 1024px) {
   .website {
     padding-top: 1rem;
