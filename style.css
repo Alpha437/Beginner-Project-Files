@@ -67,7 +67,8 @@ h1 {
   font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
   text-decoration: underline;
   color: #2212aa;
 }
@@ -210,7 +211,7 @@ article .first {
   color: black;
   font-weight: var(--fw-600);
 }
-.related-title:hover {
+.related-title:hover, .related-title:focus {
   text-decoration: underline;
   color: #2212aa;
   cursor: pointer;
